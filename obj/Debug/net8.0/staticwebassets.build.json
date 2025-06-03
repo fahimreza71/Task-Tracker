@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6op7AhOZhO2Xt2wczmF7/1k/plurAuoUFe7NKW569nA=",
+  "Hash": "C380kYhH2p0yjjRYQ4Xiw0QbWdGaENi4b/6IyhYfPEs=",
   "Source": "TaskTracker",
   "BasePath": "_content/TaskTracker",
   "Mode": "Default",
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mpyigms19s",
-      "Integrity": "xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=",
+      "Fingerprint": "ol7m35171h",
+      "Integrity": "BElWh0BC9uXingov4/Ns3IzPGKwJzkV8uu90bbGNh8o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -1438,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bpk8xqwxhs",
-      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "Fingerprint": "e5mcx7997t",
+      "Integrity": "Igjk/5YILLpe0iU58wOUrMQmBN8h5oDxApWDMmcUNAI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
@@ -5057,7 +5057,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "204136"
+          "Value": "281641"
         },
         {
           "Name": "Content-Type",
@@ -5065,11 +5065,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
+          "Value": "\"BElWh0BC9uXingov4/Ns3IzPGKwJzkV8uu90bbGNh8o=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 03:59:32 GMT"
+          "Value": "Tue, 03 Jun 2025 16:32:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5079,7 +5079,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
+          "Value": "sha256-BElWh0BC9uXingov4/Ns3IzPGKwJzkV8uu90bbGNh8o="
         }
       ]
     },
@@ -5166,51 +5166,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "D:\\Projects\\Task-Tracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162720"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 03:59:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bpk8xqwxhs"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetFile": "D:\\Projects\\Task-Tracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
@@ -5221,7 +5176,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "233277"
         },
         {
           "Name": "Content-Type",
@@ -5229,11 +5184,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"Igjk/5YILLpe0iU58wOUrMQmBN8h5oDxApWDMmcUNAI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 03:59:32 GMT"
+          "Value": "Tue, 03 Jun 2025 16:32:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5243,7 +5198,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-Igjk/5YILLpe0iU58wOUrMQmBN8h5oDxApWDMmcUNAI="
         }
       ]
     },
@@ -5330,8 +5285,8 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.mpyigms19s.css",
-      "AssetFile": "D:\\Projects\\Task-Tracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.e5mcx7997t.css",
+      "AssetFile": "D:\\Projects\\Task-Tracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5340,7 +5295,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "204136"
+          "Value": "233277"
         },
         {
           "Name": "Content-Type",
@@ -5348,11 +5303,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM=\""
+          "Value": "\"Igjk/5YILLpe0iU58wOUrMQmBN8h5oDxApWDMmcUNAI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 03:59:32 GMT"
+          "Value": "Tue, 03 Jun 2025 16:32:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5362,7 +5317,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "mpyigms19s"
+          "Value": "e5mcx7997t"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Igjk/5YILLpe0iU58wOUrMQmBN8h5oDxApWDMmcUNAI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.ol7m35171h.css",
+      "AssetFile": "D:\\Projects\\Task-Tracker\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281641"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BElWh0BC9uXingov4/Ns3IzPGKwJzkV8uu90bbGNh8o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 16:32:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ol7m35171h"
         },
         {
           "Name": "label",
@@ -5370,7 +5370,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xlexqj9/k3uobVwGfciZcj/eDdooaNgcf4OFLtLUygM="
+          "Value": "sha256-BElWh0BC9uXingov4/Ns3IzPGKwJzkV8uu90bbGNh8o="
         }
       ]
     },

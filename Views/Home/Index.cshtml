@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-4 mb-4">Welcome to Task Tracker</h1>
+            <p class="lead">
+                A simple and efficient way to manage your daily tasks, to-dos, reminders, and notes.
+            </p>
+            <hr class="my-4" />
+            <p>Start by logging in or creating a new account.</p>
+
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-primary btn-lg">Login</a>
+                <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-secondary btn-lg">Register</a>
+            </div>
+
+            <div class="mt-5">
+                <p class="text-muted small">
+                    Learn more about building apps with
+                    <a href="https://learn.microsoft.com/aspnet/core" target="_blank">ASP.NET Core</a>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
