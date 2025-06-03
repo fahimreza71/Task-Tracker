@@ -18,8 +18,18 @@ public class TaskService : ITaskService
         if (isCompleted.HasValue)
             query = query.Where(t => t.IsCompleted == isCompleted.Value);
 
-        if (sortBy == "duedate")
-            query = query.OrderBy(t => t.DueDate);
+        if (!string.IsNullOrEmpty(sortBy))
+        {
+            switch (sortBy.ToLower())
+            {
+                case "asc":
+                    query = query.OrderBy(t => t.DueDate);
+                    break;
+                case "desc":
+                    query = query.OrderByDescending(t => t.DueDate);
+                    break;
+            }
+        }
 
         return await query.ToListAsync();
     }
