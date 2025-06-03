@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace TaskTracker.Models
 {
     public class TaskItem
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        [Required]
+        [BindNever]
         public string UserId { get; set; }
 
         [ForeignKey("UserId")]
@@ -18,7 +19,7 @@ namespace TaskTracker.Models
 
         public string? Description { get; set; }
 
-        public bool IsCompleted { get; set; }
+        public bool IsCompleted { get; set; } = false;
 
         [DataType(DataType.Date)]
         public DateTime? DueDate { get; set; }
