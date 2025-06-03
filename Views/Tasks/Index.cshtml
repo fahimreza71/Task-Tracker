@@ -11,18 +11,18 @@
     <div class="col-md-3">
         <label class="form-label">Filter by Status</label>
         <select name="isCompleted" class="form-select">
-            <option value="">-- All --</option>
-            <option value="true" selected="@(isCompleted == "true" ? "selected" : "")">Completed</option>
-            <option value="false" selected="@(isCompleted == "false" ? "selected" : "")">Pending</option>
+            <option value="" selected="@(string.IsNullOrEmpty(isCompleted) ? "selected" : null)">-- All --</option>
+            <option value="true" selected="@(isCompleted == "true" ? "selected" : null)">Completed</option>
+            <option value="false" selected="@(isCompleted == "false" ? "selected" : null)">Pending</option>
         </select>
     </div>
 
     <div class="col-md-3">
         <label class="form-label">Sort by</label>
         <select name="sortBy" class="form-select">
-            <option value="">-- None --</option>
-            <option value="asc" selected="@(sortBy == "asc" ? "selected" : "")">Due Date Ascending</option>
-            <option value="desc" selected="@(sortBy == "desc" ? "selected" : "")">Due Date Descending</option>
+            <option value="" selected="@(string.IsNullOrEmpty(sortBy) ? "selected" : null)">-- None --</option>
+            <option value="asc" selected="@(sortBy == "asc" ? "selected" : null)">Due Date Ascending</option>
+            <option value="desc" selected="@(sortBy == "desc" ? "selected" : null)">Due Date Descending</option>
         </select>
     </div>
 
@@ -33,6 +33,7 @@
         <a asp-action="Index" class="btn btn-outline-secondary w-100">Reset</a>
     </div>
 </form>
+
 
 <p>
     <a asp-action="Create" class="btn btn-primary">+ Add Task</a>
