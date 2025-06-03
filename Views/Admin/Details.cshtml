@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IdentityUser
+@{
+    ViewData["Title"] = "User Details";
+    var tasks = ViewBag.Tasks as List<TaskItem>;
+}
+
+<h2>User Details</h2>
+
+<div class="mb-4">
+    <p><strong>User Name:</strong> @Model.UserName</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+</div>
+
+<h3>User's Tasks</h3>
+@if (tasks != null && tasks.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Is Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in tasks)
+            {
+                <tr>
+                    <td>@task.Title</td>
+                    <td>@task.Description</td>
+                    <td>@task.DueDate?.ToString("yyyy-MM-dd")</td>
+                    <td>@(task.IsCompleted ? "Yes" : "No")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No tasks found for this user.</p>
+}
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Back to User List</a>
