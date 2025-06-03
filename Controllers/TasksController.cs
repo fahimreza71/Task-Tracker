@@ -19,7 +19,7 @@ public class TasksController : Controller
     public async Task<IActionResult> Index(bool? isCompleted = null, string sortBy = null)
     {
         var user = await _userManager.GetUserAsync(User);
-        var tasks = await _taskService.GetTasksByUserIdAsync(user.Id, isCompleted, sortBy);
+        var tasks = await _taskService.GetTasksByUserIdAsync(user!.Id, isCompleted, sortBy);
         return View(tasks);
     }
 
@@ -57,7 +57,7 @@ public class TasksController : Controller
         var user = await _userManager.GetUserAsync(User);
         var task = await _taskService.GetByIdAsync(id);
 
-        if (task == null || task.UserId != user.Id)
+        if (task == null || task.UserId != user!.Id)
             return NotFound();
 
         return View(task);
@@ -72,17 +72,26 @@ public class TasksController : Controller
             return NotFound();
 
         var user = await _userManager.GetUserAsync(User);
+        var existingTask = await _taskService.GetByIdAsync(id);
 
-        if (task.UserId != user.Id)
+        if (existingTask == null || existingTask.UserId != user!.Id)
             return Unauthorized();
 
+        existingTask.Title = task.Title;
+        existingTask.Description = task.Description;
+        existingTask.IsCompleted = task.IsCompleted;
+        existingTask.DueDate = task.DueDate;
+
+        ModelState.Remove(nameof(task.UserId));
         if (ModelState.IsValid)
         {
-            await _taskService.UpdateAsync(task);
+            await _taskService.UpdateAsync(existingTask);
             return RedirectToAction(nameof(Index));
         }
+
         return View(task);
     }
+
 
     // GET: Tasks/Delete/5
     public async Task<IActionResult> Delete(Guid id)
@@ -90,7 +99,7 @@ public class TasksController : Controller
         var user = await _userManager.GetUserAsync(User);
         var task = await _taskService.GetByIdAsync(id);
 
-        if (task == null || task.UserId != user.Id)
+        if (task == null || task.UserId != user!.Id)
             return NotFound();
 
         return View(task);
@@ -104,7 +113,7 @@ public class TasksController : Controller
         var task = await _taskService.GetByIdAsync(id);
         var user = await _userManager.GetUserAsync(User);
 
-        if (task == null || task.UserId != user.Id)
+        if (task == null || task.UserId != user!.Id)
             return Unauthorized();
 
         await _taskService.DeleteAsync(id);
