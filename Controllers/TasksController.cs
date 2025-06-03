@@ -34,8 +34,15 @@ public class TasksController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(TaskItem task)
     {
+        task.Id = Guid.NewGuid();
         var user = await _userManager.GetUserAsync(User);
-        task.UserId = user.Id;
+        if (user == null)
+        {
+            return Unauthorized();
+        }
+        task.UserId = user!.Id;
+
+        ModelState.Remove(nameof(task.UserId));
         if (ModelState.IsValid)
         {
             await _taskService.CreateAsync(task);
@@ -45,7 +52,7 @@ public class TasksController : Controller
     }
 
     // GET: Tasks/Edit/5
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Edit(Guid id)
     {
         var user = await _userManager.GetUserAsync(User);
         var task = await _taskService.GetByIdAsync(id);
@@ -59,7 +66,7 @@ public class TasksController : Controller
     // POST: Tasks/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, TaskItem task)
+    public async Task<IActionResult> Edit(Guid id, TaskItem task)
     {
         if (id != task.Id)
             return NotFound();
@@ -78,7 +85,7 @@ public class TasksController : Controller
     }
 
     // GET: Tasks/Delete/5
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(Guid id)
     {
         var user = await _userManager.GetUserAsync(User);
         var task = await _taskService.GetByIdAsync(id);
@@ -92,7 +99,7 @@ public class TasksController : Controller
     // POST: Tasks/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> DeleteConfirmed(int id)
+    public async Task<IActionResult> DeleteConfirmed(Guid id)
     {
         var task = await _taskService.GetByIdAsync(id);
         var user = await _userManager.GetUserAsync(User);
