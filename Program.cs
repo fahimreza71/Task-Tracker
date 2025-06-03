@@ -22,6 +22,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
+
 
 var app = builder.Build();
 
@@ -39,10 +41,13 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Tasks}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+app.MapRazorPages();
+
 
 app.Run();
