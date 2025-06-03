@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using TaskTracker.Models;
 
-[Authorize(Roles = "Admin")]
 public class TasksController : Controller
 {
     private readonly ITaskService _taskService;
