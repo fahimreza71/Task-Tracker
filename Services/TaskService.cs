@@ -24,7 +24,7 @@ public class TaskService : ITaskService
         return await query.ToListAsync();
     }
 
-    public async Task<TaskItem> GetByIdAsync(int id)
+    public async Task<TaskItem> GetByIdAsync(Guid id)
     {
         return await _context.TaskItems.FindAsync(id);
     }
@@ -41,7 +41,7 @@ public class TaskService : ITaskService
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(Guid id)
     {
         var task = await _context.TaskItems.FindAsync(id);
         if (task != null)
