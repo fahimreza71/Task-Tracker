@@ -81,7 +81,7 @@ Task-Tracker/
    ```json
    {
      "ConnectionStrings": {
-       "DefaultConnection": "Server=.;Database=eBazaar;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true"
+       "DefaultConnection": "Server=YOUR-SERVER-NAME;Database=TaskTrackerDB;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true"
      }
    }
    ```
